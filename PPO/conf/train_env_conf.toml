@@ -1,0 +1,36 @@
+# Environment configuration used by training examples.
+[conf]
+
+# Fixed positions are used only when the matching *_random flag is false.
+# Coordinates are [x, z], each in the range 0..127.
+start = [111, 70]
+end = [20, 55]
+buff = [57, 68]
+
+# Random placement switches.
+start_random = true
+end_random = true
+buff_random = true
+obstacle_random = true
+treasure_random = true
+
+# Buff respawn cooldown after collection.
+buff_cooldown = 100
+
+# Talent cooldown after use.
+talent_cooldown = 100
+
+# Number of treasures to place when treasure_random=true.
+treasure_count = 10
+
+# Fixed treasure positions used when treasure_random=false.
+treasure_pos = []
+
+# Fixed obstacle ids used when obstacle_random=false. Valid ids are 1..6.
+obstacle_id = []
+
+# 1 means super flash talent.
+talent_type = 1
+
+# Maximum steps in one episode.
+max_step = 2000

@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest a feature or improvement.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow or limitation does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the change you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact area
+      options:
+        - label: Environment
+        - label: Feature preprocessing
+        - label: PPO algorithm
+        - label: Model architecture
+        - label: Dashboard or launcher
+        - label: Documentation

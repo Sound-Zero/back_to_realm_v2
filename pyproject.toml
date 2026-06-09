@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "back-to-realm-v2"
+version = "0.1.0"
+description = "A local PPO training environment and agent for a treasure-hunt style Back To Realm task."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Back To Realm contributors" }
+]
+keywords = ["reinforcement-learning", "ppo", "pytorch", "streamlit", "game-ai"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pillow>=10",
+  "toml>=0.10.2",
+  "torch>=2.0",
+]
+
+[project.optional-dependencies]
+dashboard = [
+  "pandas>=2",
+  "plotly>=5",
+  "streamlit>=1.32",
+]
+game = [
+  "pygame>=2.5",
+]
+dev = [
+  "pytest>=8",
+  "ruff>=0.5",
+]
+
+[tool.setuptools]
+packages = ["PPO", "PPO.algorithm", "PPO.conf", "PPO.feature", "PPO.model", "PPO.workflow", "env"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

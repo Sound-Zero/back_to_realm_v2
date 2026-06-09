@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+virtualenv/
+
+# Local editor state
+.vscode/
+.idea/
+
+# Training outputs
+ckpt/
+log/
+logs/
+metrics.json
+env/log.txt
+
+# Large or generated media artifacts
+*.psd
+
+# OS files
+.DS_Store
+Thumbs.db
